@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html {
+            background-color: gray;
+        }
+        header {
+            background: url("header.jpg") no-repeat center;
+            height: 200px;
+        }
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+        }
+        main {
+            padding: 20px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h1>Mi sitio web</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, soluta voluptate dolor iure magnam eveniet at, sapiente autem molestias necessitatibus eligendi culpa officia reprehenderit quibusdam facilis corporis vitae libero alias.</p>
+        <picture>
+            <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
+            <source media="(min-width: 800px)" srcset="elva-800w.jpg">
+            <img src="elva-800w.jpg" alt="texto alternativo de la imagen">
+        </picture>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum asperiores fugit inventore culpa vero. Quas earum commodi dignissimos, porro enim totam, modi sit id ea temporibus repellendus molestias, sapiente similique.</p>
+        <img srcset="elva-fairy-320w.jpg 320w,
+                    elva-fairy-480w.jpg 480w,
+                    elva-fairy-640w.jpg 640w,
+                    elva-fairy-800w.jpg 800w"
+        sizes="(max-width: 320px) 280px,
+                (max-width: 480px) 440px,
+                (max-width: 640px) 600px,
+                800px" 
+        src="elva-fairy-800w.jpg" alt="texto alternativo de la imagen 2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quo quam voluptates consequuntur iure, quod optio soluta hic possimus odit assumenda magnam odio distinctio itaque debitis at sed iste excepturi.</p>
+    </main>
+    <footer>
+        <small>Texto legal y de copiright</small>
+    </footer>
+</body>
+</html>
