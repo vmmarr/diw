@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+<style>
+    #c {
+        border: 1px solid  #ff0000;
+    }
+</style>
+<script>
+    function comenzar() {
+        var elemento = document.getElementById("c");
+        c = elemento.getContext("2d");
+        // c.beginPath();
+        // c.moveTo(250, 50);
+        //linea curva C
+        // c.quadraticCurveTo(150, 150, 250, 250);
+        // Linea como S
+        // c.bezierCurveTo(100, 150, 400, 150, 250, 250);
+        // c.closePath();
+        // c.fill();
+        // c.stroke();
+
+        // Dibujar una cara
+        // circulo grande de la cara
+        // c.arc(200, 150, 100, 0, Math.PI*2, false);
+        // c.stroke();      
+        // c.beginPath();
+        // // Sonrrisa
+        // c.lineWidth=8;
+        // c.lineCap='butt';
+        // c.arc(200, 170, 60, 0, Math.PI, false);
+        // c.stroke();
+        // c.beginPath();
+
+        // // Nariz
+        // c.lineWidth = 5;
+        // c.lineJoin='miter';
+        // c.miterLimit=2;
+        // c.moveTo(195, 135);
+        // c.lineTo(215, 155);
+        // c.lineTo(195, 155)
+        // c.stroke();
+
+        // // Ojos
+        // c.lineWidth=1;
+        // c.fillStyle='red';
+        // c.beginPath();
+        // c.arc(175, 110, 7, 0, Math.PI*2, false);
+        // c.fill();
+        // c.beginPath();
+        // c.arc(225, 110, 7, 0, Math.PI*2, false);
+        // c.fill();
+        // c.beginPath();
+        // c.arc(168, 106, 15, 0, Math.PI*2, false);
+        // c.stroke();
+        // c.beginPath();
+        // c.arc(232, 106, 15, 0, Math.PI*2, false);
+        // c.stroke();
+
+        // Textos con sombras
+
+
+        c.shadowColor='rgba(0,0,0,0.5)';
+        c.shadowOffsetX=4;
+        c.shadowOffsetY = 4;
+        c.shadowBlur=5;
+        c.font='bold 48px verdana';
+        c.fillText('Hola amigos', 100, 100);
+        
+        
+        
+                
+    }
+    window.addEventListener("load", comenzar, false);
+</script>
+</head>
+<body>
+    <section>
+        <canvas id="c" width="500" height="300"></canvas>
+    </section>
+</body>
+</html>
