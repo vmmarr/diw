@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transformaciones</title>
+    <style>
+        #c {
+            border: 1px solid #ff0000;
+        }
+    </style>
+    <script>
+        function comenzar() {
+            var elemmento = document.getElementById('c');
+            c = elemmento.getContext('2d');
+            c.font='bold 24px verdana';
+            // c.fillText('hola amigos', 50, 20);
+            // c.translate(100, 100);
+            // c.rotate(Math.PI / 2);
+            // c.scale(3, 3);
+            
+            c.fillText('hola amigos', 0, 0)
+        }
+        window.addEventListener('load', comenzar, false);
+    </script>
+</head>
+<body>
+    <section>
+        <canvas id="c" width="1200" height="900"></canvas>
+    </section>
+</body>
+</html>
