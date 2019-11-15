@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ojos</title>
+    <style>
+        #c {
+            border: 1px solid #ff0000;
+        }
+    </style>
+    <script>
+        function comenzar() {
+            var elemento = document.getElementById('c');
+            c = elemento.getContext('2d');
+            window.addEventListener('mousemove', animacion, false);
+        }
+
+        function animacion(e) {
+            var xdelraton = e.clientX;
+            var ydelraton = e.clientY;
+
+            var xcentro = 550;
+            var ycentro = 325;
+
+            var xcentro1 = 600;
+            var ycentro1 = 325;
+
+            var angulo = Math.atan2(xdelraton-xcentro, ydelraton-ycentro);
+
+            var x = xcentro + Math.round(Math.sin(angulo) * 10);
+            var y = ycentro + Math.round(Math.cos(angulo) * 10);
+
+           
+            var angulo1 = Math.atan2(xdelraton-xcentro1, ydelraton-ycentro);
+
+            var x1 = xcentro1 + Math.round(Math.sin(angulo1) * 10);
+            var y1 = ycentro1 + Math.round(Math.cos(angulo1) * 10);
+
+            c.clearRect(0, 0, 1200, 700);
+            c.beginPath();
+            c.arc(xcentro, ycentro, 20, 0, Math.PI*2, false);
+            c.moveTo(620, 325);
+            c.arc(600, ycentro, 20, 0, Math.PI*2, false);
+            c.stroke();
+
+            c.beginPath();
+            c.arc(x, y, 10, 0, Math.PI*2, false);
+            c.moveTo(x1, y1);
+            c.arc(x1, y1, 10, 0, Math.PI*2, false);
+            c.fill();
+            
+        }
+        window.addEventListener('load', comenzar, false);
+    </script>
+</head>
+<body>
+    <section>
+        <canvas id="c" width="1200" height="700"></canvas>
+    </section>
+</body>
+</html>
