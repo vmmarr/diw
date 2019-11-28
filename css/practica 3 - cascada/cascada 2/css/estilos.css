@@ -1,0 +1,55 @@
+@import url(reset.css);
+
+#principal {
+    float: left;
+    width: 75%;
+    margin-right: 20px;
+}
+
+#lateral {
+    padding: 50px 15px;
+}
+
+body {
+    color: #b1967c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 160px;
+    background: #e1cdff url(../images/fondo_cuerpo.png) repeat-x;
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #600;
+    margin-bottom: 10px;
+}
+
+#principal h2 {
+    color: #e8a064;
+    border-bottom: 2px white solid;
+    background: url(../images/flor.png) no-repeat;
+    padding: 0 0 2px 80px;
+}
+
+#principal p {
+    color: #616161;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1em;
+    line-height: 150%;
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+
+#principal .intro {
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    margin-left: 0;
+    margin-bottom: 25px;
+}
