@@ -2,17 +2,15 @@
 
 h1 {
     color: red;
-    background: url(../imagenes/fondo.jpg) no-repeat;
-    
-    padding-top: 15%;
     font-size: 2em;
-    
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    margin-top: 8%;
+    position: relative;
 }
 
 h1 strong {
     color: white;
-    
+    font-size: 3em;
 }
 
 p strong {
@@ -25,6 +23,7 @@ h3 {
 
 ul {
     color: white;
+    float: right;
 }
 
 body {
@@ -34,7 +33,11 @@ body {
 }
 
 main {
-
+    background: url(../imagenes/fondo.jpg) center top no-repeat;
     border: 2px solid white;
     margin: 0 auto;
+}
+
+p:first-line {
+    color: #CCCC99;
 }
