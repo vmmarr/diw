@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Tipos</a></li>
+            <li><a href="#">Expertos</a></li>
+            <li><a href="#">Preguntas</a></li>
+            <li><a href="#">Proyectos</a></li>
+            <li><a href="#">Horóscopos</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Regístrate: Formulario de suscripción</h1>
+        <form name="subForm" method="post">
+          <p><label for="nombre">Nombre </label><input type="text" name="name"></p>
+          <p><label for="email">Dirección correo-e </label><input type="email" name="email"></p>
+          <p><span>Nivel</span> 
+            <label><input name="nivel" type="radio" value="novice">Principiante</label>
+            <label><input name="nivel" type="radio" value="intermediate">Intermedio</label>
+            <label><input name="nivel" type="radio" value="advanced">Avanzado</label>
+          </p>
+          <p>
+            <label for="refer">¿Cómo nos has conocido?</label>
+            <select name="refer">
+              <option value="null">Selecciona una</option>
+              <option value="1">Amigos</option>
+              <option value="2">Internet</option>
+              <option value="3">Prensa</option>
+              <option value="4">Otros</option>
+            </select>
+          </p>
+          <p>
+            <label for="comentarios">Comentarios adicionales </label>
+            <textarea name="comments" cols="35" rows="4"></textarea>
+          </p>
+          <p>
+            <input type="submit" name="Submit" value="Suscríbete !" />
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <small>IES Doñana sabe que tu privacidad es importante. por eso nuestros
+        datos están protegidos contra el fraude. La ley de protección de datos te ampara en caso de
+        publicación malintencionada de algunos de tus datos.
+      </small>
+    </footer>
+    
+</body>
+
+</html>

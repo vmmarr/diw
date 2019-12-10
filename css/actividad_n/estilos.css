@@ -1,0 +1,30 @@
+@import url(reset.css);
+body {
+    background-color: blueviolet;
+}
+
+nav {
+    width: 100%;
+}
+
+
+li {
+    float: left;
+    margin: 5%;
+    
+}
+
+main {
+    width: 100%;
+    background-color: pink;
+    text-align: center;
+    border: 1px solid red;
+    float: inline-start;
+}
+
+footer {
+    margin: 5%;
+    background-color: gray;
+    width: 100%;
+    
+}

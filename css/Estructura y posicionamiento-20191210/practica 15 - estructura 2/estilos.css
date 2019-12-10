@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2%;
+    border: 1% solid white;
+}
+
+#logo {
+    width: 25%;
+    float: left;
+}
+
+#logo img {
+    width: 100%;
+}
+
+#cabecera {
+    width: 75%;
+    margin-left: 25%;
+}
+
+#cabecera h1 {
+    margin-bottom: 0;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 400%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#menucabecera {
+    text-align: center;
+    margin-bottom: 0;
+    border-top: 1px dotted #666;
+    border-bottom: 1px dotted #666;
+    padding: 0 40px;
+}
+
+#menucabecera li {
+    display: inline;
+    padding: 0 40px;
+}
+
+#principal {
+    float: left;
+    width: 50%;
+    padding: 0 2%;
+    margin-left: 22.5%;
+}
+
+#noticias {
+    float: left;
+    width: 20%;
+    margin-left: -75%;
+    padding: 0 10px;
+}
+
+#nav {
+    float: right;
+    width: 20%;
+    margin-right: 2%;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #999;
+}
+
+.historia {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 0 0 10px 5px;
+}
+
+.historia .title {
+    display: block;
+    
+}
