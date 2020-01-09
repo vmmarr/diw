@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h2[class] {
+            color: red;
+        }
+
+        p[id="parrafo"] {
+            color: blue;
+        }
+
+        p[class|="ult"] {
+            color: #00ffff;
+        }
+
+        a[class~="enlace"] {
+            color: green;
+        }
+
+        a[href^="https"] {
+            color: #ff00ff;
+        }
+
+        a[href$=".com"] {
+            color: #663300;
+        }
+
+        a[href*="miau"] {
+            color: #ffff00;
+        }
+    </style>
+</head>
+<body>
+    <main id="cuerpo">
+        <h2 class="cabecera">Cabecera h2</h2>
+        <h2>Otra cabecera</h2>
+        <p id="parrafo">Parrafo con id</p>
+        <p>Parrafo sin id</p>
+        <p><a href="http://paginanosegura.es" class="
+            enlace enlace2">Enlace a pagina no segura</a></p>
+        <p class="ult-imo">Otro parrafo</p>
+        <p><a href="https://guauguau.es">Enlace a pagina no segura perro</a></p>
+        <p><a href="http://kikiriki.com">Enlace a pagina no segura gallo</a></p>
+        <p><a href="http://miaumiau.es">Enlace a pagina no segura gato</a></p>
+        <p><a href="http://MuuMuu.es">Enlace a pagina no segura vaca</a></p>
+    </main>
+</body>
+</html>
