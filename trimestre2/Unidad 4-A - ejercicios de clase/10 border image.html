@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Shadow</title>
+    <style>
+        div{
+            width: 300px;
+            padding: 10px 20px;
+        }
+        #round{
+            border: 15px solid transparent;
+            -moz-border-image: url("bordes.png") 30 30 round;
+            -webkit-border-image: url("bordes.png") 30 30 round;
+            -o-border-image: url("bordes.png") 30 30 round;
+            border-image: url("bordes.png") 30 30 round;
+        }
+        #stretch{
+            border: 15px solid transparent;
+            -moz-border-image: url("bordes.png") 30 30 stretch;
+            -webkit-border-image: url("bordes.png") 30 30 stretch;
+            -o-border-image: url("bordes.png") 30 30 stretch;
+            border-image: url("bordes.png") 30 30 stretch;
+        }
+        #repeat{
+            border: 15px solid transparent;
+            -moz-border-image: url("bordes.png") 30 30 repeat;
+            -webkit-border-image: url("bordes.png") 30 30 repeat;
+            -o-border-image: url("bordes.png") 30 30 repeat;
+            border-image: url("bordes.png") 30 30 repeat;
+        }
+    </style>
+</head>
+<body>
+    <div id="round">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit atque voluptatem cum natus, eos aliquam eius, porro quo, fugiat adipisci vero necessitatibus a quae numquam quod sit! Cupiditate, fugit quaerat.
+    </div>
+</body>
+</html>

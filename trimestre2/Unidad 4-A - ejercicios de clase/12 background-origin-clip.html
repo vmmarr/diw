@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #fondo {
+            background: url(yinyan.jpg) 0 0 no-repeat;
+            width: 200px;
+            height: 200px;
+            border: 20px dashed red;
+            padding: 50px;
+        }
+        /*Ejemplo 1
+        #fondo.clip{
+            background-origin: border-box;
+            background-clip: content-box;
+        }*/
+        /*Ejemplo 2
+        #fondo.clip{
+            background-origin: border-box;
+            background-clip: padding-box;
+        }*/
+        /*Ejemplo 3
+        #fondo.clip{
+            background-origin: border-box;
+            background-clip: border-box;
+        }*/
+        /*Ejemplo 4
+        #fondo.clip{
+            background-origin: padding-box;
+            background-clip: padding-box;
+        }*/
+        /*Ejemplo 5*/
+        #fondo.clip{
+            background-origin: content-box;
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="fondo" class="clip"></div>
+</body>
+</html>

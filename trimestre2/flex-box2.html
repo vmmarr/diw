@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: red;
+            height: 100px;
+        }
+        nav {
+            background-color: blue;
+            height: 100px;
+        }
+        main {
+            background-color: yellow;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        aside {
+            background-color: green;
+            width: 50%;
+        }
+        footer {
+            background-color: violet;
+            height: 100px;
+        }
+
+        #principal {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .seccion {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        h2 {
+            border: 1px solid red;
+        }
+
+        article {
+            border: 1px solid black;
+            width: 200px;
+        }
+
+        .articulos {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        #cinco {
+            order: -1;
+            flex-grow: 1;
+        }
+
+        #uno {
+            order:1;
+        }
+
+        #tres {
+            flex-shrink: -1;
+        }
+
+        #cuatro {
+            flex-basis: 350px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <nav>
+
+    </nav>
+    <div id="principal">
+        <main>
+            <section class="seccion">
+                <h2>Sección 1</h2>
+                <div class="articulos">
+                    <article id="uno">
+                        Artículo 1
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aut. Impedit, vel. Molestiae tempora, neque et, aut iste eius praesentium saepe obcaecati enim officiis distinctio ratione tempore dolores, facere architecto.</p>
+                    </article>
+                    <article id="dos">
+                        Artículo 2
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aut. Impedit, vel. Molestiae tempora, neque et, aut iste eius praesentium saepe obcaecati enim officiis distinctio ratione tempore dolores, facere architecto.</p>
+                    </article>
+                    <article id="tres">
+                        Artículo 3
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aut. Impedit, vel. Molestiae tempora, neque et, aut iste eius praesentium saepe obcaecati enim officiis distinctio ratione tempore dolores, facere architecto.</p>
+                    </article>
+                    <article id="cuatro">
+                        Artículo 4
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aut. Impedit, vel. Molestiae tempora, neque et, aut iste eius praesentium saepe obcaecati enim officiis distinctio ratione tempore dolores, facere architecto.</p>
+                    </article>
+                    <article id="cinco">
+                        Artículo 5
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aut. Impedit, vel. Molestiae tempora, neque et, aut iste eius praesentium saepe obcaecati enim officiis distinctio ratione tempore dolores, facere architecto.</p>
+                    </article>
+                </div>
+            </section>
+            <section class="seccion">
+                <h2>Sección 2</h2>
+                <div class="articulos">
+                    <article>
+                        Artículo 1
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aut. Impedit, vel. Molestiae tempora, neque et, aut iste eius praesentium saepe obcaecati enim officiis distinctio ratione tempore dolores, facere architecto.</p>
+                    </article>
+                    <article>
+                        Artículo 2
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aut. Impedit, vel. Molestiae tempora, neque et, aut iste eius praesentium saepe obcaecati enim officiis distinctio ratione tempore dolores, facere architecto.</p>
+                    </article>
+                    <article>
+                        Artículo 3
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aut. Impedit, vel. Molestiae tempora, neque et, aut iste eius praesentium saepe obcaecati enim officiis distinctio ratione tempore dolores, facere architecto.</p>
+                    </article>
+                    <article>
+                        Artículo 4
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aut. Impedit, vel. Molestiae tempora, neque et, aut iste eius praesentium saepe obcaecati enim officiis distinctio ratione tempore dolores, facere architecto.</p>
+                    </article>
+                    <article>
+                        Artículo 5
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aut. Impedit, vel. Molestiae tempora, neque et, aut iste eius praesentium saepe obcaecati enim officiis distinctio ratione tempore dolores, facere architecto.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <aside>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure ratione harum dolor soluta alias consectetur sit magnam, minima veniam optio? Rerum, illo? Magnam dolor mollitia numquam perferendis quidem iusto unde.</p>
+        </aside>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>
