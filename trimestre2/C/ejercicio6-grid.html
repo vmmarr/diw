@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .grid-container {
+            display: grid;
+            /*Número de columnas y anchura*/
+            grid-template-columns: auto auto auto auto;
+            /*Altura de las filas*/
+            grid-template-rows: auto 200px;
+            /*Huecos*/
+            grid-row-gap: 100px;
+            grid-column-gap: 50px;
+            /*grid-gap: 100px 50px;*/
+        }
+        .grid-item {
+            padding: 15px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias id rem quod consequuntur soluta voluptatibus nisi vitae ipsam assumenda, illo fuga magnam dignissimos voluptatum facere temporibus nulla expedita nostrum eos.</div>
+        <div class="grid-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure dolorem inventore ullam nesciunt? Minima, cupiditate error non tempore quae iste a, eaque, voluptatibus amet optio natus ipsam vitae sequi!</div>
+        <div class="grid-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum recusandae omnis commodi a excepturi earum facere deleniti? Laboriosam alias earum libero ad, saepe expedita accusamus eos tempora suscipit quas nisi?</div>
+        <div class="grid-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam ut non facere, neque veritatis nisi blanditiis minus labore? Soluta suscipit dolor magni eius ipsam. Tempore fuga nostrum ad officia id.</div>
+        <div class="grid-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora amet accusantium nesciunt tenetur ipsum temporibus nostrum in laboriosam sit consectetur ducimus laborum et voluptatibus incidunt voluptate aliquam, eveniet ipsa aliquid.</div>
+        <div class="grid-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sint, atque possimus reprehenderit ducimus, dignissimos quae quis veniam molestias beatae, obcaecati voluptate velit recusandae consequatur tempora at asperiores eius corporis.</div>
+        <div class="grid-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eius placeat eligendi aliquam officia quidem! Est dignissimos, aliquam voluptas culpa quod, nisi enim sed harum at ea dolorem consectetur. Odio.</div>
+        <div class="grid-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, alias? Hic, amet quis cum ipsum aspernatur praesentium a, reprehenderit id, perspiciatis nam ut excepturi in facilis. Similique ducimus voluptas ipsum?</div>
+        <div class="grid-item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, dicta ab beatae veritatis culpa odit distinctio placeat sunt aperiam! Tempora facere tenetur reprehenderit magni vitae, assumenda doloremque ullam alias libero.</div>
+    </div>      
+</body>
+</html>

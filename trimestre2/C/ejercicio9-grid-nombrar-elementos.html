@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid black;
+        }
+        header {grid-area: header;}
+        nav {grid-area: nav;}
+        main {grid-area: main;}
+        aside {grid-area: aside;}
+        footer {grid-area: footer;}
+
+        .grid-container{
+            display: grid;
+            
+            grid-template-areas:
+                'header header header header header header'
+                'nav nav nav nav nav nav'
+                'aside aside main main main main'
+                'aside aside footer footer footer footer';
+        }
+
+    </style>
+</head>
+<body class="grid-container">
+    <header>
+        <p>Header: Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aliquam illo eveniet, dolorem cupiditate iste quisquam, harum laudantium accusamus cum voluptatem officiis consectetur perspiciatis, fuga temporibus libero molestiae optio doloremque.</p>
+    </header>
+    <nav>
+        <p>Nav: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta fuga animi non ducimus? Nisi iusto doloremque molestias delectus, error illo esse nulla rerum blanditiis, necessitatibus dolorum culpa autem, dolore dolores?</p>
+    </nav>
+    <main>
+        <p>Main: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aspernatur pariatur explicabo obcaecati voluptate magni fuga? Accusantium earum, at quis delectus sunt maiores? Nisi quasi, rerum dicta temporibus pariatur enim.</p>
+    </main>
+    <aside>
+        <p>Aside: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias explicabo vitae eveniet, provident vero iure reiciendis! Nulla maiores quia deleniti a officia aliquid iusto hic praesentium perferendis dolorum! Odio, molestias?</p>
+    </aside>
+    <footer>
+        <p>Footer: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora, hic neque delectus repellat molestiae ipsa itaque et maxime. Reprehenderit nihil quod rerum consequuntur neque non molestias quaerat dolorum doloribus?</p>
+    </footer>
+</body>
+</html>
