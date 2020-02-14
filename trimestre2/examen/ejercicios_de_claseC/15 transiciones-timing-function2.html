@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s;
+            margin-bottom: 5px;
+        }
+        #div1 {
+            transition-timing-function: steps(6, jump-start);
+        }
+        #div2 {
+            transition-timing-function: steps(6, jump-end);
+        }
+        #div3 {
+            transition-timing-function: steps(6, jump-none);
+        }
+        #div4 {
+            transition-timing-function: steps(6, jump-both);
+        }
+        #div5 {
+            transition-timing-function: step-start;
+        }
+        #div6 {
+            transition-timing-function: step-end;
+        }
+        div:hover {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">jump-start</div>
+    <div id="div2">jump-end</div>
+    <div id="div3">jump-none</div>
+    <div id="div4">jump-both</div>
+    <div id="div5">step-start</div>
+    <div id="div6">step-end</div>
+</body>
+</html>

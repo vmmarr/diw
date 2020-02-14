@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul.breadcrumb {
+          padding: 8px 16px;
+          list-style: none;
+          background-color: #eee;
+        }
+        
+        ul.breadcrumb li {
+            display: inline;
+        }
+        
+        /*Todos los li que están inmediatamente después de otro li*/
+        ul.breadcrumb li+li:before {
+          padding: 8px;
+          color: black;
+          content: "/\00a0";
+        }
+        
+        ul.breadcrumb li a {color: green;}
+    </style>
+</head>
+<body>
+    <h2>Migas de pan</h2>
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Imágenes</a></li>
+        <li><a href="#">Invierno 2020</a></li>
+        <li>Italy</li>
+    </ul>  
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            counter-reset: section;
+        }
+        h2::before {
+            counter-increment: section;
+            content: "Section " counter(section) ": ";
+        }
+    </style>
+</head>
+<body>
+    <h2>Cabecera 1</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto perferendis, sit iusto blanditiis voluptate, dolore perspiciatis, fugiat dicta cum tempora libero nostrum ex distinctio numquam? Optio ipsam et facere suscipit!</p>
+    <h2>Cabecera 2</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis animi accusantium itaque! Adipisci pariatur laboriosam quis voluptate voluptatibus, distinctio corporis mollitia, animi quo consectetur, repudiandae possimus magni ducimus nihil? Velit!</p>
+    <h2>Cabecera 3</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus aperiam numquam qui voluptatum totam voluptate obcaecati nisi, deserunt libero, maxime facere, ut aut. Pariatur iste illo itaque nesciunt similique modi?</p>
+</body>
+</html>

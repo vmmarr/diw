@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction:column;
+        }
+        header{
+            background-color: red;
+            height: 100px;
+        }
+        nav{
+            background-color:blue;
+            height: 100px;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            background-color: yellow;
+            width: 50%;
+        }
+        aside{
+            background-color: green;
+            width: 50%;
+        }
+        footer{
+            background-color: violet;
+            height: 100px;
+        }
+        #principal{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .seccion{
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        h2{
+            border: 1px solid red;
+        }
+        article{
+            border: 1px solid black; 
+            width:200px;
+        }
+        .articulos{
+            display:flex;
+            flex-flow: row wrap;
+        }
+        #cinco{
+            order:-1;
+            flex-grow: 1;
+        }
+        #uno{
+            order:1;
+        }
+        #tres{
+            flex-shrink: 2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <nav>
+
+    </nav>
+    <div id="principal">
+        <main>
+            <section class="seccion">
+                <h2>Sección 1</h2>
+                <div class="articulos">
+                    <article id="uno">Artículo 1
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit suscipit et id repellat debitis consequuntur molestiae totam veritatis aliquid distinctio blanditiis inventore nulla minus ullam sed, quam, voluptas perferendis.</p>
+                    </article>
+                    <article id="dos">Artículo 2
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit suscipit et id repellat debitis consequuntur molestiae totam veritatis aliquid distinctio blanditiis inventore nulla minus ullam sed, quam, voluptas perferendis.</p>
+                    </article>
+                    <article id="tres">Artículo 3
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit suscipit et id repellat debitis consequuntur molestiae totam veritatis aliquid distinctio blanditiis inventore nulla minus ullam sed, quam, voluptas perferendis.</p>
+                    </article>
+                    <article id="cuatro">Artículo 4
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit suscipit et id repellat debitis consequuntur molestiae totam veritatis aliquid distinctio blanditiis inventore nulla minus ullam sed, quam, voluptas perferendis.</p>
+                    </article>
+                    <article id="cinco">Artículo 5
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit suscipit et id repellat debitis consequuntur molestiae totam veritatis aliquid distinctio blanditiis inventore nulla minus ullam sed, quam, voluptas perferendis.</p>
+                    </article>
+                </div>
+            </section>
+            <section class="seccion">
+                <h2>Sección 2</h2>
+                <div class="articulos">
+                    <article>Artículo 1
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit suscipit et id repellat debitis consequuntur molestiae totam veritatis aliquid distinctio blanditiis inventore nulla minus ullam sed, quam, voluptas perferendis.</p>
+                    </article>
+                    <article>Artículo 2
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit suscipit et id repellat debitis consequuntur molestiae totam veritatis aliquid distinctio blanditiis inventore nulla minus ullam sed, quam, voluptas perferendis.</p>
+                    </article>
+                    <article>Artículo 3
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit suscipit et id repellat debitis consequuntur molestiae totam veritatis aliquid distinctio blanditiis inventore nulla minus ullam sed, quam, voluptas perferendis.</p>
+                    </article>
+                    <article>Artículo 4
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit suscipit et id repellat debitis consequuntur molestiae totam veritatis aliquid distinctio blanditiis inventore nulla minus ullam sed, quam, voluptas perferendis.</p>
+                    </article>
+                    <article>Artículo 5
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit suscipit et id repellat debitis consequuntur molestiae totam veritatis aliquid distinctio blanditiis inventore nulla minus ullam sed, quam, voluptas perferendis.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <aside>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error beatae praesentium aperiam debitis architecto quia nobis necessitatibus? Culpa nihil aut a similique, sunt quas repellat suscipit aliquam iure doloremque odit?</p>
+        </aside>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>

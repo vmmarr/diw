@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      :root{
+        --variable: 0;
+        --borde: 4px dashed red;
+      }
+      #caja {
+        --variable: 1;
+        border: var(--borde);
+      }
+      div {
+        /*width: 130px;             /* salvaguarda para navegadores que no reconocen calc() */
+        width: calc(100% / 6);
+        border: 1px solid black;
+        padding: calc(40px * var(--variable));
+      }
+    </style>
+</head>
+<body>
+      <div id="caja">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel itaque blanditiis pariatur, accusamus eligendi ullam, voluptas vero ipsum minima nobis eos recusandae iure tempora voluptatem corporis. Tenetur accusantium maiores doloremque!</p>
+      </div>
+      <div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur sit similique quas perspiciatis amet impedit aut quisquam nam veritatis ipsum id quis odio nobis molestias vitae, consequatur rem, iste velit!</p>
+      </div>
+</body>
+</html>
