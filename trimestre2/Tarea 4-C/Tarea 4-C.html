@@ -1,59 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tarea 4-A</title>
-        <style>
-        @font-face {
-            font-family: mifuente;
-            src: url('Bangers-Regular.ttf');
-        }
-        h3, h1, h2{
-            font-family: mifuente;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4-C</title>
+    <style>
+        header h1 {
+            align-self: center;
+            text-align: center;
         }
 
-        h1 {
-            text-shadow: 5px 5px 5px gray;
-        }
+        header {grid-area: header;}
+        main {grid-area: main;}
+        aside {grid-area: aside;}
+        footer {grid-area: footer;}
 
-        h2 {
-            background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-                        linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-                        linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-            width: 150px;
-            padding: 10px 20px;
+        .container {
+            display: grid;
+            grid-template-areas:
+                'header header header header'
+                'main main main main'
+                'aside aside aside aside'
+                'footer footer footer footer';
         }
         
-        p {
-            color: white;
-            padding: 5% 12%;
-            background-image: url("background.jpg");
-            background-size: 100% 100%;           
-            background-repeat: no-repeat;
+        header {
+            display: grid;
+            justify-content: center;
+        }
 
+        aside section {
+            display: grid;
+        }
 
-            -moz-column-count:3;
-            -webkit-column-count:3;
-            column-count:3;
+        main section {
+            display: grid;
+        }
 
-            -moz-column-gap:40px;
-            -webkit-column-gap:40px;
-            column-gap:40px;
-            
-            -moz-column-rule: 4px outset #ff00ff;
-            -webkit-column-rule: 4px outset #ff00ff;
-            column-rule: 4px outset #ff00ff;
+        footer {
+            display: grid;
+        }
 
-            box-shadow: 10px 10px 5px #888888;
+        @media (max-width:767px) {
+            header h1 {
+                display: none;
+            }
+        }
+
+        @media (min-width:768px) {
+            header {
+                grid-template-columns: 25% 75%;
+            }
+
+            aside section {
+                grid-template-columns: auto auto;
+            }
+
+            aside section h2 {
+                grid-column: 1 / span 2;
+            }
+
+            main section {
+                grid-template-columns: auto auto;
+            }
+
+            main section h2 {
+                grid-column: 1 / span 2;
+            }
+
+            footer {
+                grid-template-columns: auto auto;
+            }
+        }
         
+        @media (min-width:992px){
+            .container {
+                display: grid;        
+                grid-template-areas:
+                    'header header header header'
+                    'aside main main main'
+                    'footer footer footer footer';
+            }
+
+            aside section {
+                grid-template-columns: auto;
+            }
+
+            aside section >* {
+                grid-column: 1 / span 1;
+            }
+        }
+
+        @media (min-width:1200px) {
+            main section {
+                grid-template-columns: auto auto auto;
+            }
+
+            main section h2 {
+                grid-column: 1 / span 3;
+            }
+
+            footer {
+                grid-template-columns: auto auto auto auto;
+            }
         }
     </style>
 </head>
-<body>
+<body class="container">
     <header>
-        <h1>Tarea 4-A</h1>
+        <h1>Tarea 4-C</h1>
     </header>
+    <aside>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi labore dignissimos consectetur laudantium non corporis nisi vel sed numquam fugiat quasi aliquam et, quaerat vitae a! Doloremque illo dolore consequuntur nam aut, rerum esse iste aliquam rem dolorum molestias incidunt quaerat error, fugit fuga eveniet facere velit id! Fugiat laudantium, dolores totam, blanditiis molestias doloremque mollitia nostrum esse nulla voluptatibus sapiente, dolore assumenda nihil perspiciatis consequatur corrupti nobis quod? Ipsa commodi animi repellendus doloribus possimus quam facere, fuga ipsam architecto laudantium dolorem tempora saepe corporis ullam sed ratione. Dolor, cum molestiae labore quod ratione sit ut magni laboriosam aspernatur.</p>
+    </aside>
     <main>
         <section>
             <h2>Sección 1</h2>
@@ -92,5 +151,8 @@
             </article>
         </section>
     </main>
+    <footer>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, magnam veniam! Vitae unde neque nesciunt error maxime nam incidunt commodi, dolor illum delectus a voluptates rerum doloribus nostrum totam laboriosam minus dicta consequuntur nisi facere. Id impedit accusantium, consequuntur ullam neque fuga doloribus distinctio esse, voluptatum tenetur suscipit quia itaque dignissimos optio saepe veniam, adipisci temporibus alias veritatis. Fugiat velit eius officia praesentium quam tempora, porro minus illo autem, architecto labore saepe, nesciunt impedit repellat tempore. Assumenda nesciunt repudiandae hic perspiciatis est eveniet nobis nam consequuntur delectus alias aliquam, necessitatibus quia in voluptatibus possimus illo consequatur deserunt illum obcaecati deleniti?</p>
+    </footer>
 </body>
 </html>

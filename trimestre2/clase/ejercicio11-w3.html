@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+    <style>
+        .mySlides {display:none}
+        .w3-left, .w3-right, .w3-badge {cursor:pointer}
+        .w3-badge {height:13px;width:13px;padding:0}
+        .w3-allerta {
+            font-family: "Allerta Stencil", Sans-serif;
+        }
+        @media only screen and (max-width:599px) {
+            .no-movil {
+                display: none;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <!--Hamburguesa-->
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-home"></i> Home</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="far fa-circle"></i> Enlace 1</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="far fa-circle"></i> Enlace 2</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="far fa-circle"></i> Enlace 3</a>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button"><i class="fas fa-chevron-down"></i> Enlace 4</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                <a href="#" class="w3-bar-item w3-button">Enlace 4.1</a>
+                <a href="#" class="w3-bar-item w3-button">Enlace 4.2</a>
+                <a href="#" class="w3-bar-item w3-button">Enlace 4.3</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button"><i class="fas fa-chevron-down"></i> Enlace 5</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                <a href="#" class="w3-bar-item w3-button">Enlace 5.1</a>
+                <a href="#" class="w3-bar-item w3-button">Enlace 5.2</a>
+                <a href="#" class="w3-bar-item w3-button">Enlace 5.3</a>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="w3-black">
+            <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+        </div>
+        <script>
+            function w3_open() {
+                document.getElementById("main").style.marginLeft = "40%";
+                document.getElementById("mySidebar").style.width = "40%";
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("openNav").style.display = 'none';
+            }
+            function w3_close() {
+                document.getElementById("main").style.marginLeft = "0%";
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("openNav").style.display = "inline-block";
+            }
+        </script>
+
+        <!--Cabecera-->
+        <header class="w3-row">
+        <div class="w3-display-container">
+            <img class="mySlides" src="imagenes/arbol1-c.jpg" style="width:100%">
+            <img class="mySlides" src="imagenes/arbol2-c.jpg" style="width:100%">
+            <img class="mySlides" src="imagenes/puesta_de_sol-c.jpg" style="width:100%">
+            <div class="w3-display-topleft w3-container w3-jumbo w3-text-white w3-allerta no-movil" style="margin-right:30px">Creando mi Web</div>
+            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div>
+      
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+      
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+      
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+      
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-white", "");
+                }
+                x[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " w3-white";
+            }
+        </script>
+        </header>
+        <!--Fin Cabecera-->
+
+        <!--Barra de navegación-->
+        <nav class="w3-row no-movil">
+            <div class="w3-bar w3-black">
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-home"></i> Home</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="far fa-circle"></i> Enlace 1</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="far fa-circle"></i> Enlace 2</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="far fa-circle"></i> Enlace 3</a>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button"><i class="fas fa-chevron-down"></i> Enlace 4</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                        <a href="#" class="w3-bar-item w3-button">Enlace 4.1</a>
+                        <a href="#" class="w3-bar-item w3-button">Enlace 4.2</a>
+                        <a href="#" class="w3-bar-item w3-button">Enlace 4.3</a>
+                    </div>
+                </div>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button"><i class="fas fa-chevron-down"></i> Enlace 5</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                        <a href="#" class="w3-bar-item w3-button">Enlace 5.1</a>
+                        <a href="#" class="w3-bar-item w3-button">Enlace 5.2</a>
+                        <a href="#" class="w3-bar-item w3-button">Enlace 5.3</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--Fin Barra de navegación-->
+
+        <!--main-->
+        <main class="w3-row">
+            <section class="w3container w3-row">
+                <h2 class="w3-panel w3-dark-gray w3-allerta">SECCIÓN 1</h2>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="w3-hover-opacity" src="imagenes/arbol1.jpg" alt="Árbol 1" style="width:100%">
+                    <h3 class="w3-panel w3-red w3-allerta">Artículo 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nobis, cumque neque necessitatibus deserunt explicabo maiores ipsam dolorum impedit tempore minima fuga libero quos cupiditate, alias quis eligendi facilis atque?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam accusamus iste rerum ea aperiam facere porro quo numquam iure molestias impedit distinctio mollitia, similique recusandae nulla, officia dignissimos, totam minima.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="w3-hover-opacity" src="imagenes/arbol2.jpg" alt="Árbol 2" style="width:100%">
+                    <h3 class="w3-panel w3-red w3-allerta">Artículo 2</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo officia quasi ab fugiat quia inventore odit, vero perspiciatis nostrum aut illum beatae modi perferendis laudantium unde fuga nesciunt asperiores eos?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa nemo earum, consectetur similique, dolorem sapiente unde itaque atque qui nihil laboriosam quaerat eveniet eius exercitationem dicta libero sint molestiae hic.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="w3-hover-opacity" src="imagenes/puesta_de_sol.jpg" alt="Puesta de Sol" style="width:100%">
+                    <h3 class="w3-panel w3-red w3-allerta">Artículo 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus nulla debitis aut? Officia nostrum, repellendus id quae neque possimus debitis sed omnis ea deleniti rerum consectetur expedita ipsam molestiae.Tenetur nihil iure nesciunt corrupti perferendis earum unde laborum, est fugiat quaerat impedit numquam? Quisquam qui itaque, soluta veniam odio repudiandae doloribus consequuntur, corrupti quo ab ipsa officia aliquid laudantium.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+            </section>
+            <section class="w3container w3-row">
+                <h2 class="w3-panel w3-dark-gray w3-allerta">SECCIÓN 2</h2>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="w3-hover-opacity" src="imagenes/arbol1.jpg" alt="Árbol 1" style="width:100%">
+                    <h3 class="w3-panel w3-red w3-allerta">Artículo 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nobis, cumque neque necessitatibus deserunt explicabo maiores ipsam dolorum impedit tempore minima fuga libero quos cupiditate, alias quis eligendi facilis atque?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam accusamus iste rerum ea aperiam facere porro quo numquam iure molestias impedit distinctio mollitia, similique recusandae nulla, officia dignissimos, totam minima.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="w3-hover-opacity" src="imagenes/arbol2.jpg" alt="Árbol 2" style="width:100%">
+                    <h3 class="w3-panel w3-red w3-allerta">Artículo 2</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo officia quasi ab fugiat quia inventore odit, vero perspiciatis nostrum aut illum beatae modi perferendis laudantium unde fuga nesciunt asperiores eos?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa nemo earum, consectetur similique, dolorem sapiente unde itaque atque qui nihil laboriosam quaerat eveniet eius exercitationem dicta libero sint molestiae hic.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="w3-hover-opacity" src="imagenes/puesta_de_sol.jpg" alt="Puesta de Sol" style="width:100%">
+                    <h3 class="w3-panel w3-red w3-allerta">Artículo 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus nulla debitis aut? Officia nostrum, repellendus id quae neque possimus debitis sed omnis ea deleniti rerum consectetur expedita ipsam molestiae.Tenetur nihil iure nesciunt corrupti perferendis earum unde laborum, est fugiat quaerat impedit numquam? Quisquam qui itaque, soluta veniam odio repudiandae doloribus consequuntur, corrupti quo ab ipsa officia aliquid laudantium.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+            </section>
+        </main>
+        <!--Fin main-->
+        
+        <!--Footer-->
+        <footer>
+            <div class="w3-container">
+                <h3 class="w3-panel w3-red">Encuéntranos en...</h3>
+              
+                <div class="w3-row">
+                  <a href="javascript:void(0)" onclick="openCity(event, 'London');">
+                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">London</div>
+                  </a>
+                  <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
+                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Paris</div>
+                  </a>
+                  <a href="javascript:void(0)" onclick="openCity(event, 'Tokyo');">
+                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Tokyo</div>
+                  </a>
+                </div>
+              
+                <div id="London" class="w3-container city" style="display:none">
+                  <h2>London</h2>
+                  <p>London es la capital de Inglaterra.</p>
+                </div>
+              
+                <div id="Paris" class="w3-container city" style="display:none">
+                  <h2>Paris</h2>
+                  <p>Paris es la capital de Francia.</p> 
+                </div>
+              
+                <div id="Tokyo" class="w3-container city" style="display:none">
+                  <h2>Tokyo</h2>
+                  <p>Tokyo es la capital de Japón.</p>
+                </div>
+            </div>
+              
+              <script>
+              function openCity(evt, cityName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("city");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-border-red";
+              }
+              </script>   
+        </footer>
+        <!--Fin Footer-->
+        <div class="w3-container">
+            <h2>Nuestro equipo</h2>
+            <ul class="w3-ul w3-card-4">
+              <li class="w3-bar w3-hover-red">  
+                <img src="imagenes/img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                <div class="w3-bar-item">
+                  <span class="w3-large">Mike</span><br>
+                  <span>Web Designer</span>
+                </div>
+              </li>
+          
+              <li class="w3-bar w3-hover-blue">
+                <img src="imagenes/img_avatar5.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                <div class="w3-bar-item">
+                  <span class="w3-large">Jill</span><br>
+                  <span>Support</span>
+                </div>
+              </li>
+          
+              <li class="w3-bar w3-hover-green">
+                <img src="imagenes/img_avatar6.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                <div class="w3-bar-item">
+                  <span class="w3-large">Jane</span><br>
+                  <span>Accountant</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="w3-panel w3-center w3-black w3-padding-16"><small>Copyright &copy; 2020</small></div>
+    </div>
+    <!--Fin Hamburguesa-->
+</body>
+</html>
