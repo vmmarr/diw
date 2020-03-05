@@ -6,50 +6,122 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <header>
-        <div class="w3-teal">
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>    
+    
+    <div id="main">
+        <div class="w3-blue">
             <button class="w3-button" onclick="w3_open()">☰</button>
         </div>
-        <img class="mySlides" src="imagenes/arbol1-c.jpg" style="width:100%">
-        <img class="mySlides" src="imagenes/arbol2-c.jpg" style="width:100%">
-        <img class="mySlides" src="imagenes/puesta_de_sol-c.jpg" style="width:100%">
-        <div class="w3-jumbo w3-tangerine w3-display-topleft w3-container w3-text-white">Mi web</div>
-        <script>
-            var myIndex = 0;
-            carousel();
-            
-            function carousel() {
-              var i;
-              var x = document.getElementsByClassName("mySlides");
-              for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-              }
-              myIndex++;
-              if (myIndex > x.length) {myIndex = 1}    
-              x[myIndex-1].style.display = "block";  
-              setTimeout(carousel, 2000); // Change image every 2 seconds
-            }
-        </script>
-        <!-- Hamburguesa -->
-        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-            <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-            <a href="#" class="w3-bar-item w3-button">Link 1</a>
-            <a href="#" class="w3-bar-item w3-button">Link 2</a>
-            <a href="#" class="w3-bar-item w3-button">Link 3</a>
-        </div>
-            
+        
         <script>
             function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("main").style.marginLeft = "20%";
+                document.getElementById("mySidebar").style.width = "20%";
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("openNav").style.display = 'none';
             }
-            
             function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("main").style.marginLeft = "0%";
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("openNav").style.display = "inline-block";
             }
         </script>
-    </header>
+            
+        <header class="w3-row">
+            <div class="w3-display-container">
+
+                <img class="mySlides" src="imagenes/arbol1-c.jpg" style="width:100%">
+                <img class="mySlides" src="imagenes/arbol2-c.jpg" style="width:100%">
+                <img class="mySlides" src="imagenes/puesta_de_sol-c.jpg" style="width:100%">
+                <div class="w3-jumbo w3-tangerine w3-display-topleft w3-container w3-text-white">Mi web</div>
+            </div>
+            <script>
+                var myIndex = 0;
+                carousel();
+                
+                function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+                }
+            </script>
+        </header>
+
+        <nav class="w3-row no-movil">
+            <div class="w3-bar w3-black">
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-home"></i> Home</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="far fa-circle"></i> Link 1</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="far fa-circle"></i> Link 2</a>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button"><i class="fas fa-chevron-down"></i> Link 3</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                        <a href="#" class="w3-bar-item w3-button">Link 3.1</a>
+                        <a href="#" class="w3-bar-item w3-button">Link 3.2</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="w3-row">
+            <section class="w3container w3-row">
+                <h2 class="w3-panel w3-dark-gray w3-allerta">SECCIÓN 1</h2>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="w3-hover-opacity" src="imagenes/arbol1.jpg" alt="Árbol 1" style="width:100%">
+                    <h3 class="w3-panel w3-red w3-allerta">Artículo 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nobis, cumque neque necessitatibus deserunt explicabo maiores ipsam dolorum impedit tempore minima fuga libero quos cupiditate, alias quis eligendi facilis atque?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam accusamus iste rerum ea aperiam facere porro quo numquam iure molestias impedit distinctio mollitia, similique recusandae nulla, officia dignissimos, totam minima.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="w3-hover-opacity" src="imagenes/arbol2.jpg" alt="Árbol 2" style="width:100%">
+                    <h3 class="w3-panel w3-red w3-allerta">Artículo 2</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo officia quasi ab fugiat quia inventore odit, vero perspiciatis nostrum aut illum beatae modi perferendis laudantium unde fuga nesciunt asperiores eos?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa nemo earum, consectetur similique, dolorem sapiente unde itaque atque qui nihil laboriosam quaerat eveniet eius exercitationem dicta libero sint molestiae hic.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="w3-hover-opacity" src="imagenes/puesta_de_sol.jpg" alt="Puesta de Sol" style="width:100%">
+                    <h3 class="w3-panel w3-red w3-allerta">Artículo 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus nulla debitis aut? Officia nostrum, repellendus id quae neque possimus debitis sed omnis ea deleniti rerum consectetur expedita ipsam molestiae.Tenetur nihil iure nesciunt corrupti perferendis earum unde laborum, est fugiat quaerat impedit numquam? Quisquam qui itaque, soluta veniam odio repudiandae doloribus consequuntur, corrupti quo ab ipsa officia aliquid laudantium.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+            </section>
+            <section class="w3container w3-row">
+                <h2 class="w3-panel w3-dark-gray w3-allerta">SECCIÓN 2</h2>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="w3-hover-opacity" src="imagenes/arbol1.jpg" alt="Árbol 1" style="width:100%">
+                    <h3 class="w3-panel w3-red w3-allerta">Artículo 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nobis, cumque neque necessitatibus deserunt explicabo maiores ipsam dolorum impedit tempore minima fuga libero quos cupiditate, alias quis eligendi facilis atque?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam accusamus iste rerum ea aperiam facere porro quo numquam iure molestias impedit distinctio mollitia, similique recusandae nulla, officia dignissimos, totam minima.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="w3-hover-opacity" src="imagenes/arbol2.jpg" alt="Árbol 2" style="width:100%">
+                    <h3 class="w3-panel w3-red w3-allerta">Artículo 2</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo officia quasi ab fugiat quia inventore odit, vero perspiciatis nostrum aut illum beatae modi perferendis laudantium unde fuga nesciunt asperiores eos?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa nemo earum, consectetur similique, dolorem sapiente unde itaque atque qui nihil laboriosam quaerat eveniet eius exercitationem dicta libero sint molestiae hic.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="w3-hover-opacity" src="imagenes/puesta_de_sol.jpg" alt="Puesta de Sol" style="width:100%">
+                    <h3 class="w3-panel w3-red w3-allerta">Artículo 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus nulla debitis aut? Officia nostrum, repellendus id quae neque possimus debitis sed omnis ea deleniti rerum consectetur expedita ipsam molestiae.Tenetur nihil iure nesciunt corrupti perferendis earum unde laborum, est fugiat quaerat impedit numquam? Quisquam qui itaque, soluta veniam odio repudiandae doloribus consequuntur, corrupti quo ab ipsa officia aliquid laudantium.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
