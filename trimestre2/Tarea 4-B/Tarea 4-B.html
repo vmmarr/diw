@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tarea 4-A</title>
-        <style>
-        @font-face {
-            font-family: mifuente;
-            src: url('Bangers-Regular.ttf');
-        }
-        h3, h1, h2{
-            font-family: mifuente;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4-B</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: center;
+            flex-basis: 100%;
         }
 
-        h1 {
-            text-shadow: 5px 5px 5px gray;
+        .contenedor, .contenedor section {
+            display: flex;
+            flex-wrap: wrap;
         }
 
-        h2 {
-            background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-                        linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-                        linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-            width: 150px;
-            padding: 10px 20px;
+        main section h2 {
+            flex-basis: 100%;
         }
-        
-        p {
-            color: white;
-            padding: 5% 12%;
-            background-image: url("background.jpg");
-            background-size: 100% 100%;           
-            background-repeat: no-repeat;
 
+        @media (max-width: 767px) {
+            header h1 {
+                display: none;
+            }
+        }
 
-            -moz-column-count:3;
-            -webkit-column-count:3;
-            column-count:3;
+        @media (min-width: 768px) {
+            .contenedor article {
+                flex-basis: 50%;
+            }
+        }
 
-            -moz-column-gap:40px;
-            -webkit-column-gap:40px;
-            column-gap:40px;
-            
-            -moz-column-rule: 4px outset #ff00ff;
-            -webkit-column-rule: 4px outset #ff00ff;
-            column-rule: 4px outset #ff00ff;
+        @media (min-width: 992px) {
+            main {
+                flex-basis: 75%;
+            }
+        }
 
-            box-shadow: 10px 10px 5px #888888;
+        @media (min-width: 1200px) {
+            .contenedor main article {
+                flex-basis: auto auto auto;
+            }
         
         }
     </style>
 </head>
-<body>
+<body class="contenedor">
     <header>
-        <h1>Tarea 4-A</h1>
+        <h1>Tarea 4-B</h1>
     </header>
     <main>
         <section>
